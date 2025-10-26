@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexia - Freelance Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Alexia</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <a href="#contact" class="hire-btn">Hire me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                My Freelance<br>
+                Journey<br>
+                Starts Here
+            </h1>
+            <p class="hero-subtitle">
+                Hi im Alexia Lets Explore what<br>
+                can I do
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h2 class="about-title">About me</h2>
+            <p class="about-text">
+                Hey there! I'm Alexia Cayabyab, a motivated student and future 
+                innovator who believes that success starts with curiosity and hard 
+                work. I'm always eager to learn, collaborate, and bring fresh ideas to 
+                life. Whether it's leading a project, creating something new, or simply 
+                helping others, I give my best in everything I do. My goal? To keep 
+                growing, inspiring, and leaving a mark that matters
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="skills-container">
+            <h2 class="skills-title">Skills</h2>
+            
+            <div class="skills-tabs" role="tablist" aria-label="Skills tabs">
+                <button type="button" class="tab-btn active" data-tab="soft" aria-controls="soft" role="tab" aria-selected="true">Soft</button>
+                <button type="button" class="tab-btn" data-tab="technical" aria-controls="technical" role="tab" aria-selected="false">Technical</button>
+            </div>
+            
+            <div class="skills-content">
+                <!-- Soft Skills Tab -->
+                <div class="tab-content active" id="soft">
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-badge">Problem-solving and critical thinking</div>
+                        <div class="soft-skill-badge">Adaptability to new technologies</div>
+                        <div class="soft-skill-badge">Team collaboration on projects and Leadership</div>
+                        <div class="soft-skill-badge">Attention to detail</div>
+                        <div class="soft-skill-badge">Team collaboration on projects</div>
+                        <div class="soft-skill-badge">Communication Skills</div>
+                    </div>
+                </div>
+                
+                <!-- Technical Skills Tab -->
+                <div class="tab-content" id="technical">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            </div>
+                            <p class="skill-name">HTML</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            </div>
+                            <p class="skill-name">CSS</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon canva-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+                            </div>
+                            <p class="skill-name">Canva Editing</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon microsoft-icon">
+                                <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#f25022" d="M0 0h11v11H0z"/>
+                                    <path fill="#00a4ef" d="M12 0h11v11H12z"/>
+                                    <path fill="#7fba00" d="M0 12h11v11H0z"/>
+                                    <path fill="#ffb900" d="M12 12h11v11H12z"/>
+                                </svg>
+                            </div>
+                            <p class="skill-name">Microsoft 365</p>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon capcut-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="black"/>
+                                    <path d="M12 4L4 8v8l8 4 8-4V8l-8-4z" fill="white"/>
+                                    <path d="M12 12L8 10v4l4 2 4-2v-4l-4 2z" fill="black"/>
+                                </svg>
+                            </div>
+                            <p class="skill-name">Capcut Editing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
