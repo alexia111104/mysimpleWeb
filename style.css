@@ -17,7 +17,6 @@ body {
     left: 0;
     right: 0;
     background-color: rgba(21, 50, 43, 0.95);
-    
     padding: 1rem 2rem;
     z-index: 1000;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
@@ -106,6 +105,82 @@ body {
     font-style: italic;
     opacity: 0.95;
     line-height: 1.6;
+}
+
+/* Achievements Section */
+.achievements-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(30, 60, 52, 0.75), rgba(30, 60, 52, 0.75)),
+                url('images/background-website.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+}
+
+.achievements-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.achievements-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.achievement-card {
+    background-color: rgba(60, 90, 80, 0.7);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-subtitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.achievement-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: white;
+}
+
+.achievement-description p {
+    margin-bottom: 0.5rem;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-list li {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.achievement-list strong {
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
 /* Skills Section */
@@ -262,6 +337,163 @@ body {
     padding: 2rem;
 }
 
+.coming-soon {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(30, 60, 52, 0.8), rgba(30, 60, 52, 0.8)),
+                url('images/background-website.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+}
+
+.contact-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    color: white;
+}
+
+.profile-role {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: rgba(60, 90, 80, 0.7);
+    padding: 1.2rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    background-color: rgba(70, 100, 90, 0.8);
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-text {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.contact-cta {
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1.1;
+    text-align: right;
+    color: white;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-btn {
+    background-color: rgba(60, 90, 80, 0.8);
+    color: white;
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.contact-btn:hover {
+    background-color: rgba(70, 100, 90, 0.9);
+    transform: translateY(-5px);
+}
+
 /* About Section */
 .about-section {
     min-height: 100vh;
@@ -299,6 +531,7 @@ body {
     height: 100vh;
     background: linear-gradient(rgba(30, 60, 52, 0.8), rgba(30, 60, 52, 0.8)),
                 url('images/background-website.jpg') center/cover no-repeat;
+                
     display: flex;
     align-items: center;
     justify-content: center;
@@ -432,5 +665,33 @@ body {
         right: 2rem;
         width: 40px;
         height: 40px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-right {
+        align-items: center;
+    }
+    
+    .contact-cta {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .contact-btn {
+        width: 100%;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
     }
 }
