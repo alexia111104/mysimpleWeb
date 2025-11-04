@@ -134,7 +134,7 @@ body {
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
 }
 
@@ -255,11 +255,46 @@ body {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2.5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
     justify-items: center;
-    max-width: 850px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none; /* shown only on small screens */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.menu-toggle .hamburger {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: white;
+    position: relative;
+}
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: white;
+}
+.menu-toggle .hamburger::before { top: -8px; }
+.menu-toggle .hamburger::after { top: 8px; }
+
+/* When mobile nav is open */
+.nav-menu.open {
+    display: block !important;
 }
 
 .soft-skills-grid {
@@ -606,7 +641,17 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(21,50,43,0.98);
+        padding: 1rem 2rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     }
+    .nav-menu li { margin: 0.6rem 0; }
+    .nav-menu a { display: block; font-size: 1.1rem; }
+    .menu-toggle { display: flex; }
     
     .hero {
         padding: 0 2rem;
@@ -629,7 +674,7 @@ body {
     }
     
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
     
@@ -695,3 +740,21 @@ body {
         text-align: center;
     }
 }
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .skills-tabs { width: 100%; justify-content: center; padding: 0.25rem; }
+    .tab-btn { padding: 0.6rem 1rem; font-size: 1rem; }
+    .skills-grid { grid-template-columns: repeat(1, 1fr); gap: 1rem; }
+    .achievement-card { padding: 1.2rem; }
+    .contact-buttons { flex-direction: column; gap: 1rem; }
+}
+
+@media (max-width: 380px) {
+    .logo { font-size: 1.6rem; }
+    .hire-btn { padding: 0.5rem 1rem; font-size: 0.95rem; }
+    .profile-name { font-size: 1.4rem; }
+    .profile-image { width: 96px; height: 96px; }
+}
+
