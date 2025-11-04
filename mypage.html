@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexia - Freelance Portfolio</title>
+    <title>Alexia - Alexia's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -12,7 +12,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Alexia</div>
-            <ul class="nav-menu">
+            <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#achievements">Achievements</a></li>
@@ -100,14 +103,14 @@
         <div class="skills-container">
             <h2 class="skills-title">Skills</h2>
             
-            <div class="skills-tabs">
-                <button class="tab-btn active" data-tab="soft">Soft</button>
-                <button class="tab-btn" data-tab="technical">Technical</button>
+            <div class="skills-tabs" role="tablist" aria-label="Skills Tabs">
+                <button id="tab-soft" class="tab-btn active" data-tab="soft" role="tab" type="button" aria-controls="soft" aria-selected="true">Soft</button>
+                <button id="tab-technical" class="tab-btn" data-tab="technical" role="tab" type="button" aria-controls="technical" aria-selected="false">Technical</button>
             </div>
             
             <div class="skills-content">
                 <!-- Soft Skills Tab -->
-                <div class="tab-content active" id="soft">
+                <div class="tab-content active" id="soft" role="tabpanel" aria-labelledby="tab-soft">
                     <div class="soft-skills-grid">
                         <div class="soft-skill-badge">Problem-solving and critical thinking</div>
                         <div class="soft-skill-badge">Adaptability to new technologies</div>
@@ -119,7 +122,7 @@
                 </div>
                 
                 <!-- Technical Skills Tab -->
-                <div class="tab-content" id="technical">
+                <div class="tab-content" id="technical" role="tabpanel" aria-labelledby="tab-technical">
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">
