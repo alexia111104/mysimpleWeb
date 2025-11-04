@@ -18,6 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         tabContents.forEach(content => {
+            content.classList.remove('a// Skills Tab Functionality (robust, accessible)
+document.addEventListener('DOMContentLoaded', () => {
+    const tabsContainer = document.querySelector('.skills-tabs');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (!tabsContainer) return; // nothing to do
+
+    // Helper to activate a tab by button element
+    function activateTab(button) {
+        const targetId = button && button.dataset && button.dataset.tab;
+        if (!targetId) return;
+
+        // deactivate all
+        tabsContainer.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+            btn.setAttribute('tabindex', '-1');
+        });
+
+        tabContents.forEach(content => {
             content.classList.remove('active');
             content.setAttribute('hidden', '');
         });
