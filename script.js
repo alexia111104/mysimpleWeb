@@ -88,4 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize: ensure only active content is visible
     const activeBtn = tabsContainer.querySelector('.tab-btn.active') || tabsContainer.querySelector('.tab-btn');
     activateTab(activeBtn);
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close the mobile menu when a link is clicked
+        navMenu.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
 });
